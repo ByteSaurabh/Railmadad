@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #FAFAFA; /* gray-50 */
+    --color-foreground: #111827; /* gray-900 */
+    --color-border: #E5E7EB; /* gray-200 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #2563EB; /* blue-600 */
+    
+    /* Card & Surface Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #111827; /* gray-900 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #111827; /* gray-900 */
+    
+    /* Muted Colors */
+    --color-muted: #F3F4F6; /* gray-100 */
+    --color-muted-foreground: #6B7280; /* gray-500 */
+    
+    /* Brand Primary Colors */
+    --color-primary: #2563EB; /* blue-600 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Brand Secondary Colors */
+    --color-secondary: #059669; /* emerald-600 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #DC2626; /* red-600 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #DC2626; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Additional Brand Colors */
+    --color-trust: #5DADE2; /* sky-400 */
+    --color-trust-foreground: #1E293B; /* slate-800 */
+    --color-authority: #1B4F72; /* blue-900 */
+    --color-authority-foreground: #FFFFFF; /* white */
+    --color-resolution: #28B463; /* green-500 */
+    --color-resolution-foreground: #FFFFFF; /* white */
+    --color-alert: #F39C12; /* orange-500 */
+    --color-alert-foreground: #FFFFFF; /* white */
+    
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    
+    /* Spacing Scale */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-sm: 0.75rem; /* 12px */
+    --spacing-md: 1rem; /* 16px */
+    --spacing-lg: 1.5rem; /* 24px */
+    --spacing-xl: 2rem; /* 32px */
+    --spacing-2xl: 3rem; /* 48px */
+    --spacing-3xl: 4rem; /* 64px */
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-md: 0.5rem; /* 8px */
+    --radius-lg: 0.75rem; /* 12px */
+    --radius-xl: 1rem; /* 16px */
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+    --shadow-critical: 0 10px 25px rgba(0, 0, 0, 0.15);
+    
+    /* Animation Timing */
+    --transition-fast: 200ms ease-in-out;
+    --transition-normal: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+    --transition-spring: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark {
+    --color-background: #000000;
+    --color-foreground: #f3f4f6;
+    --color-border: #27272a;
+    --color-input: #23272f;
+    --color-ring: #818cf8;
+    --color-card: #18181b;
+    --color-card-foreground: #f3f4f6;
+    --color-popover: #18181b;
+    --color-popover-foreground: #f3f4f6;
+    --color-muted: #27272a;
+    --color-muted-foreground: #a1a1aa;
+    --color-primary: #818cf8;
+    --color-primary-foreground: #18181b;
+    --color-secondary: #38bdf8;
+    --color-secondary-foreground: #18181b;
+    --color-accent: #f472b6;
+    --color-accent-foreground: #18181b;
+    --color-success: #34d399;
+    --color-success-foreground: #18181b;
+    --color-warning: #fbbf24;
+    --color-warning-foreground: #18181b;
+    --color-error: #ef4444;
+    --color-error-foreground: #18181b;
+    --color-destructive: #ef4444;
+    --color-destructive-foreground: #18181b;
+    --color-trust: #60a5fa;
+    --color-trust-foreground: #18181b;
+    --color-authority: #1e293b;
+    --color-authority-foreground: #f3f4f6;
+    --color-resolution: #22d3ee;
+    --color-resolution-foreground: #18181b;
+    --color-alert: #f59e42;
+    --color-alert-foreground: #18181b;
+  }
+  
+  body.dark {
+    background-color: #000 !important;
+    color: #f3f4f6 !important;
+  }
+  
+  h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark {
+    color: #f3f4f6 !important;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold tracking-tight;
+  }
+  
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  /* Trust Building Animations */
+  .blockchain-pulse {
+    animation: blockchain-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes blockchain-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Authority Glow Effect */
+  .authority-glow {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+    transition: box-shadow var(--transition-normal);
+  }
+  
+  .authority-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.4);
+  }
+  
+  /* Verification Badge Animation */
+  .verification-reveal {
+    animation: verification-reveal 1.2s ease-out forwards;
+  }
+  
+  @keyframes verification-reveal {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.8);
+    }
+    50% {
+      opacity: 0.7;
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  /* Progressive Disclosure */
+  .progressive-reveal {
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path var(--transition-slow) var(--transition-spring);
+  }
+  
+  .progressive-reveal.revealed {
+    clip-path: circle(100% at 50% 50%);
+  }
+  
+  /* Smart Form Transitions */
+  .form-field-enter {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-normal) var(--transition-spring);
+  }
+  
+  .form-field-enter.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* IoT Sensor Status */
+  .sensor-active {
+    animation: sensor-pulse 2s infinite;
+  }
+  
+  @keyframes sensor-pulse {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+      opacity: 0.8;
+      box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+  }
+  
+  /* Mobile Optimization */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Accessibility Enhancements */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+  
+  /* Data Visualization */
+  .chart-animate {
+    animation: chart-draw 1s ease-out forwards;
+  }
+  
+  @keyframes chart-draw {
+    0% {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@layer utilities {
+  /* Custom Spacing */
+  .space-golden > * + * {
+    margin-top: calc(1rem * 1.618);
+  }
+  
+  /* Typography Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Performance Optimizations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Brand Specific Utilities */
+  .railway-gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+  
+  .trust-gradient {
+    background: linear-gradient(135deg, var(--color-trust) 0%, var(--color-primary) 100%);
+  }
+  
+  .authority-gradient {
+    background: linear-gradient(135deg, var(--color-authority) 0%, var(--color-primary) 100%);
+  }
+}
