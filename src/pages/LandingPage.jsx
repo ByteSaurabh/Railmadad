@@ -41,7 +41,7 @@ const LandingPage = () => {
         </div>
         {/* Hero Image Section */}
         <div className="flex-1 flex justify-center items-center">
-          <img src="/public/assets/images/no_image.png" alt="Railway AI Hero" className="w-full max-w-md rounded-2xl shadow-2xl border-4 border-white/30" />
+          <img src="/assets/images/no_image.png" alt="Railway AI Hero" className="w-full max-w-md rounded-2xl shadow-2xl border-4 border-white/30" />
         </div>
       </div>
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
@@ -51,3 +51,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+ 
